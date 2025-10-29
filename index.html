@@ -4,11 +4,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微笑桥-让高端旅行，回归本真的体面与自在</title>
+    <title data-i18n="site.title">微笑桥-让高端旅行，回归本真的体面与自在</title>
+    <link rel="stylesheet" href="css/static.css">
 </head>
 
 <body>
+    <header>
+        <div class="goldenratio">
+            <!-- Logo -->
+            <div class="logo-container">
+                <h1><img src="img/logo_eng.jpg" alt="website logo">
+                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#about-us">关于我们</a></li>
+                    <li><a href="#services">品质服务</a></li>
+                    <li><a href="#contact-us">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <div class="language-selector-trigger">
+                    <span class="language-text" id="currentLanguageText">中文</span>
+                    <span class="language-arrow">▼</span>
+                </div>
+                <div class="language-selector-options">
+                    <div class="language-option" data-lang="zh">
+                        <span class="language-text">中文</span>
+                    </div>
+                    <div class="language-option" data-lang="en">
+                        <span class="language-text">English</span>
+                    </div>
+                    <div class="language-option" data-lang="ja">
+                        <span class="language-text">日本語</span>
+                    </div>
+                    <div class="language-option" data-lang="ko">
+                        <span class="language-text">한국어</span>
+                    </div>
+                    <div class="language-option" data-lang="es">
+                        <span class="language-text">Español</span>
+                    </div>
+                    <div class="language-option" data-lang="pt">
+                        <span class="language-text">Português</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="about-us">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 data-i18n="about.title">微笑桥：让高端旅行，回归本真的体面与自在</h2>
+                <ul>
+                    <li data-i18n="about.p1">真正私人定制的旅行服务</li>
+                    <li data-i18n="about.p2">专注于高端出行领域，以定制化全链路服务</li>
+                    <li data-i18n="about.p3">提供中、英、韩、日、西、葡多语种专属对接</li>
+                    <li data-i18n="about.p4">隐私不是"附加服务"，24小时专属管家一对一服务</li>
+                    <li data-i18n="about.p5">中国、韩国、日本、西班牙多语言应急团队</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
 
+        <!-- 4大服务类目导航 -->
+        <!-- <nav class="main-nav">
+            <ul class="nav-links">
+                <li class="nav-item" data-service="travel">
+                    <a href="#travel-details" class="nav-link">
+                        <span class="nav-title" data-i18n="services.travel.title">旅游出行定制</span>
+                        <span class="nav-title" data-i18n="services.travel.title">旅游出行定制</span>
+                        <span class="nav-tagline" data-i18n="services.travel.tagline">高端私享，自在体面</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-service="tech-company">
+                    <a href="#tech-company-details" class="nav-link">
+                        <span class="nav-title" data-i18n="services.tech.title">企业创新旅游</span>
+                        <span class="nav-title" data-i18n="services.tech.title">高科技企业创新旅游</span>
+                        <span class="nav-tagline" data-i18n="services.tech.tagline">智享科技，预见未来</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-service="auto-drive">
+                    <a href="#auto-drive-details" class="nav-link">
+                        <span class="nav-title" data-i18n="services.auto.title">自动驾驶之旅</span>
+                        <span class="nav-title" data-i18n="services.auto.title">新能源汽车自动驾驶之旅</span>
+                        <span class="nav-tagline" data-i18n="services.auto.tagline">智驾未来，驭见新生</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-service="tech-combo">
+                    <a href="#tech-combo-details" class="nav-link">
+                        <span class="nav-title" data-i18n="services.combo.title">科技双享套餐</span>
+                        <span class="nav-title" data-i18n="services.combo.title">科技双享套餐</span>
+                        <span class="nav-tagline" data-i18n="services.combo.tagline">研发 + 应用，全场景体验</span>
+                    </a>
+                </li>
+            </ul>
+        </nav> -->
+        <section class="service-details" id="travel-details">
+            <div class="image-container"><img src="img/cars_001.jpg" alt="" srcset=""></div>
+            <div class="details-container">
+                <h2 data-i18n="travel.title">旅游出行定制 </h2>
+                <!-- - 微笑桥 -->
+
+                <div class="detail-section">
+                    <h3 data-i18n="travel.brand.title">品牌理念</h3>
+                    <p data-i18n="travel.brand.desc">微笑桥：让高端旅行，回归本真的体面与自在</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3 data-i18n="travel.pain.title">用户痛点直击</h3>
+                    <p data-i18n="travel.pain.desc1">你是否早已厌倦 ——</p>
+                    <ul>
+                        <li data-i18n="travel.pain.desc2">花重金预订的 "私人行程"，实则是旅行社拼凑的固定路线，偶遇旅行团扎堆打卡？</li>
+                        <li data-i18n="travel.pain.desc3">入住标榜 "总统套房" 的酒店，却要在早餐时与陌生宾客拥挤等候，隐私荡然无存？</li>
+                        <li data-i18n="travel.pain.desc4">想探访小众秘境，向导却只会背诵大众攻略，错过藏在当地人生活里的真正惊喜？</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h3 data-i18n="travel.advantages.title">核心服务优势</h3>
+                    <p data-i18n="travel.advantages.desc1">作为高端出行领域的行业新贵，微笑桥以 定制化全链路服务 脱颖而出，区别于 "仅提供交通工具"
+                        的传统模式，构建从路线规划、翻译陪同到接送机、行程应急的无缝高端体验闭环。</p>
+
+                    <div class="advantage-item">
+                        <h4 data-i18n="travel.advantages.point1.title">专属匹配，拒绝 "差不多"</h4>
+                        <p data-i18n="travel.advantages.point1.desc">无固定模板，仅提供 "量身定制"
+                            的行程剧本。精通中国本土高端场景，可设计北京、上海、香港、澳门多地联动行程；配备中、英、韩、日、西语、葡语多语种专属对接，全程消除语言壁垒，秒级响应行程调整需求。</p>
+                    </div>
+
+                    <div class="advantage-item">
+                        <h4 data-i18n="travel.advantages.point2.title">隐私守护，视为 "基本准则"</h4>
+                        <p data-i18n="travel.advantages.point2.desc">入住前 24 小时协调客房（远离电梯、专属楼层），同步客户偏好（枕头硬度、房间布置）至酒店管家；24
+                            小时专属管家一对一响应突发需求，无需层层转接，以 "零信息外泄" 协议保障隐私。</p>
+                    </div>
+
+                    <div class="advantage-item">
+                        <h4 data-i18n="travel.advantages.point3.title">灵活应急，从容应对 "意外"</h4>
+                        <p data-i18n="travel.advantages.point3.desc">
+                            在中国（北京、上海、广州、深圳、成都、香港、澳门等）及韩国、日本主要城市设专属服务点，配备多语言应急团队与合作医疗机构。突发状况（航班延误、景点关闭、临时加项）无需客户协调，当地团队迅速提供替代方案。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h3 data-i18n="travel.cases.title">服务案例</h3>
+                    <ul>
+                        <li data-i18n="travel.cases.desc1">为 20 位高端外国客户提供多地出行服务，30 分钟内协调完成北京临时体验场地，灵活调整参观顺序与特色项目。</li>
+                        <li data-i18n="travel.cases.desc2">在故宫旁为 20 + 外国高端客户定制专属烤鸭宴，客户返程留言："这趟旅行最珍贵的，是你们让我的每一个临时想法都能成真。"
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <div class="detail-section cta-section">
+                    <h3 data-i18n="travel.cta.title">行动号召</h3>
+                    <p data-i18n="travel.cta.desc">当你受够了标准化的 "奢华陷阱"，渴望一场真正契合灵魂的出行 ——
+                        点击下方，免费获取你的专属出行方案初稿。这一次，让微笑桥，给你超越期待的高端体验。</p>
+                    <button class="cta-button" data-i18n="travel.cta.button">获取专属方案</button>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="service-details" id="tech-company-details">
+            <div class="details-container">
+                <h2 data-i18n="tech.title">高科技企业创新旅游套餐方案</h2>
+
+                <div class="detail-section">
+                    <h3 data-i18n="tech.name.title">方案名称</h3>
+                    <p data-i18n="tech.name.desc">"智享科技・预见未来"—— 高科技企业深度探秘之旅</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3 data-i18n="tech.content.title">套餐核心内容</h3>
+                    <p data-i18n="tech.content.desc">采用 "1+N" 模块化设计：</p>
+                    <ul>
+                        <li data-i18n="tech.content.main">"1"：核心科技体验主线（聚焦高科技企业研发、生产、应用全流程探秘）</li>
+                        <li data-i18n="tech.content.addon">"N"：定制化附加服务（可根据客群需求组合搭配，如高管座谈、技术 workshop、行业趋势分享等）</li>
+                    </ul>
+                </div>
+
+                <!-- <div class="detail-section cta-section">
+                    <button class="cta-button" data-i18n="tech.cta.button">咨询详情</button>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="service-details" id="auto-drive-details">
+            <div class="details-container">
+                <h2 data-i18n="auto.title">前沿新能源汽车自动驾驶体验之旅</h2>
+
+                <div class="detail-section">
+                    <h3 data-i18n="auto.name.title">旅程名称</h3>
+                    <p data-i18n="auto.name.desc">"智驾未来・驭见新生"—— 前沿新能源汽车自动驾驶深度体验之旅</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3 data-i18n="auto.content.title">旅程核心内容</h3>
+                    <p data-i18n="auto.content.desc">采用 "技术溯源 — 场景体验 — 深度解析" 三段式结构：</p>
+                    <ul>
+                        <li data-i18n="auto.content.trace">技术溯源：探访新能源汽车自动驾驶研发中心，了解算法、传感器等核心技术原理</li>
+                        <li data-i18n="auto.content.experience">场景体验：覆盖城市道路、高速路、园区等自动驾驶核心场景，沉浸式体验不同路况下的智驾功能</li>
+                        <li data-i18n="auto.content.analysis">深度解析：配备技术专家随行，实时解读智驾操作逻辑与行业发展趋势</li>
+                    </ul>
+                </div>
+
+                <!-- <div class="detail-section cta-section">
+                    <button class="cta-button" data-i18n="auto.cta.button">预约体验</button>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="service-details" id="tech-combo-details">
+            <div class="details-container">
+                <h2 data-i18n="combo.title">科技双享套餐</h2>
+
+                <div class="detail-section">
+                    <h3 data-i18n="combo.position.title">套餐定位</h3>
+                    <p data-i18n="combo.position.desc">"高科技企业探秘 + 新能源自动驾驶体验" 组合旅程</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3 data-i18n="combo.value.title">核心价值</h3>
+                    <p data-i18n="combo.value.desc">覆盖 "研发端（高科技企业）+ 应用端（新能源自动驾驶）" 全场景，一次行程满足科技爱好者对 "技术源头" 与 "实际应用"
+                        的双重探索需求。
+                    </p>
+                </div>
+
+                <!-- <div class="detail-section cta-section">
+                    <button class="cta-button" data-i18n="combo.cta.button">了解套餐</button>
+                </div> -->
+            </div>
+        </section>
+    </div>
+    <!-- <section class="hero-section">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">科技与高端定制旅游</h1>
+            <p data-i18n="hero.subtitle">探索无限可能，享受尊贵体验</p>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <h2 data-i18n="services.title">核心服务类目</h2>
+        <div class="services-grid"> 
+    <div class="service-card" data-service="travel">
+        <div class="service-icon">
+            <img src="img/cars_001.jpg" alt="旅游出行定制">
+        </div>
+        <h3 data-i18n="services.travel.title">旅游出行定制</h3>
+        <p data-i18n="services.travel.tagline">高端私享，自在体面</p>
+    </div>
+ 
+    <div class="service-card" data-service="tech-company">
+        <div class="service-icon">
+            <img src="img/cars_002.jpg" alt="高科技企业创新旅游套餐方案">
+        </div>
+        <h3 data-i18n="services.tech.title">高科技企业创新旅游套餐方案</h3>
+        <p data-i18n="services.tech.tagline">智享科技，预见未来</p>
+    </div>
+ 
+    <div class="service-card" data-service="auto-drive">
+        <div class="service-icon">
+            <img src="img/car_009.jpg" alt="前沿新能源汽车自动驾驶之旅">
+        </div>
+        <h3 data-i18n="services.auto.title">前沿新能源汽车自动驾驶之旅</h3>
+        <p data-i18n="services.auto.tagline">智驾未来，驭见新生</p>
+    </div>
+ 
+    <div class="service-card" data-service="tech-combo">
+        <div class="service-icon">
+            <img src="img/cars_003.jpg" alt="科技双享套餐">
+        </div>
+        <h3 data-i18n="services.combo.title">科技双享套餐</h3>
+        <p data-i18n="services.combo.tagline">研发 + 应用，全场景体验</p>
+    </div>
+    </div>
+    </section> -->
+    <footer id="contact-us">
+        <div class="goldenratio">
+            <h2>联系我们</h2>
+            <div class="footer-contact">
+                <div class="footer-content">
+                    <p>李先生</p>
+                    <p>上海市 浦东新区</p>
+                    <p>+86 13472548340</p>
+                    <p>lizanzanmei@gmail.com</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><img src="img/Line.JPG" alt="LINE"><span>LINE</span></a>
+                    <a href="#"><img src="img/KakaoTalk.png" alt="KakaoTalk"><span>KakaoTalk</span></a>
+                    <a href="#"><img src="img/WhatsApp.png" alt="WhatsApp"><span>WhatsApp</span></a>
+                    <a href="#"><img src="img/WeChat.png" alt="WeChat"><span>WeChat</span></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p data-i18n="footer.copyright">© 2025 SmileLink</p>
+            </div>
+    </footer>
+    <script src="js/dyn.js"></script>
 </body>
 
 </html>
