@@ -76,6 +76,7 @@ nav ul li a {
 nav ul li a:hover {
     font-weight: bold;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .about-container {
@@ -103,6 +104,8 @@ nav ul li a:hover {
 
 .about-content h2 {
     font-size: 48px;
+
+    padding-bottom: 40px;
 }
 
 .about-content li {
@@ -111,17 +114,68 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-section {
-    background-color: #f9f0c7;
 
-}
 
-section.service-details {
+
+.service {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #f9f0c7;
+    padding: 80px 6.18% 0 6.18%;
+    /* background-image: url(../img/wallhaven-rq75r7_1920x1200.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.service section {
+    width: 47.5%;
+    height: 400px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.service section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-card {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    position: relative;
+    height: 275px;
+    overflow: hidden;
+}
+
+.image-card img {
+    width: 100%;
+}
+
+.details-container {
+    height: 100px;
+}
+
+.details-container h2 {
     padding-left: 6.18%;
     padding-right: 6.18%;
+    line-height: 50px;
 }
+
+
+
+
+
 
 .image-container {
     width: 50%
@@ -130,10 +184,6 @@ section.service-details {
 .image-container img {
     width: 100%;
     height: 640px;
-}
-
-.details-container {
-    width: 50%
 }
 
 .logo-container {
@@ -155,6 +205,37 @@ section.service-details {
 }
 
 
+
+
+.passage {
+    background-image: url(../img/wallhaven-rq75r7_1920x1200.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1200px;
+    position: relative;
+}
+
+.passage::before {
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    /* 渐变羽化效果的高度 */
+    background: linear-gradient(to bottom,
+            rgba(249, 240, 199, 1) 0%,
+            /* service 区域的背景色 */
+            rgba(249, 240, 199, 0.8) 20%,
+            rgba(249, 240, 199, 0.6) 40%,
+            rgba(249, 240, 199, 0.4) 60%,
+            rgba(249, 240, 199, 0.2) 80%,
+            rgba(249, 240, 199, 0) 100%);
+    z-index: 1;
+}
 
 
 footer {
@@ -258,6 +339,7 @@ footer {
 
 .language-selector-trigger:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 .language-flag {
@@ -307,6 +389,7 @@ footer {
 
 .language-option:hover {
     background-color: #f9f0c7;
+
 }
 
 .language-option:hover .language-text {
