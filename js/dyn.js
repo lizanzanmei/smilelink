@@ -684,3 +684,46 @@ async function initLanguage() {
 
 // 页面加载完成后初始化语言
 document.addEventListener('DOMContentLoaded', initLanguage);
+
+
+// 汉堡菜单点击事件处理
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const nav = document.querySelector('nav');
+
+if (mobileMenuBtn && nav) {
+    mobileMenuBtn.addEventListener('click', function () {
+        // 切换按钮和导航菜单的活动状态
+        this.classList.toggle('active');
+        nav.classList.toggle('active');
+
+        // 添加点击外部区域关闭菜单的功能
+        document.addEventListener('click', closeMenuOnOutsideClick);
+    });
+}
+
+// 点击外部区域关闭菜单
+function closeMenuOnOutsideClick(e) {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+
+    if (!mobileMenuBtn.contains(e.target) && !nav.contains(e.target)) {
+        mobileMenuBtn.classList.remove('active');
+        nav.classList.remove('active');
+        document.removeEventListener('click', closeMenuOnOutsideClick);
+    }
+}
+
+// 点击导航链接后关闭菜单
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+
+        if (mobileMenuBtn && nav) {
+            mobileMenuBtn.classList.remove('active');
+            nav.classList.remove('active');
+            document.removeEventListener('click', closeMenuOnOutsideClick);
+        }
+    });
+});

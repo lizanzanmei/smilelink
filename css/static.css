@@ -412,6 +412,44 @@ footer {
     font-weight: 600;
 }
 
+/* 在头部样式之后添加汉堡菜单按钮样式 */
+.mobile-menu-btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px auto;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* 修改语言选择器样式，确保它在桌面端也是正确的 */
+.language-selector {
+    position: relative;
+    z-index: 1000;
+}
 
 /* 响应式设计 - 移动端优化 */
 @media (max-width: 768px) {
@@ -427,20 +465,40 @@ footer {
         margin-right: auto;
     }
 
-    /* 头部导航调整 */
+
+    /* 头部导航调整 - 新布局 */
     header {
         height: auto;
         padding: 15px 0;
+        position: relative;
     }
 
     header .goldenratio {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
+    /* 显示汉堡菜单按钮 */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* 导航菜单默认隐藏 */
     nav {
-        width: 100%;
-        margin-top: 15px;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: #88a563;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        padding-top: 80px;
+    }
+
+    nav.active {
+        left: 0;
     }
 
     nav ul {
@@ -456,16 +514,28 @@ footer {
 
     nav ul li a {
         line-height: 30px;
-        font-size: 16px;
+        font-size: 18px;
+        padding-left: 20px;
     }
 
+    /* Logo居中 */
     .logo-container {
-        width: 100%;
+        width: auto;
+        flex: 1;
         text-align: center;
     }
 
     .logo-container img {
-        max-height: 60px;
+        max-height: 50px;
+    }
+
+    /* 语言选择器放在最右边 */
+    .language-selector {
+        width: auto;
+        margin-top: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-shrink: 0;
     }
 
     /* 关于我们部分调整 */
@@ -556,14 +626,6 @@ footer {
         position: relative;
         bottom: auto;
         margin-top: 20px;
-    }
-
-    /* 语言选择器调整 */
-    .language-selector {
-        width: 100%;
-        margin-top: 15px;
-        display: flex;
-        justify-content: flex-end;
     }
 }
 
