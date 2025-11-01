@@ -614,7 +614,7 @@ footer {
 
     .footer-social a {
         display: block;
-        margin: 10px 40px 10px 0;
+        margin: 10px 20px 10px 0;
     }
 
     .footer-social img {
@@ -656,4 +656,5 @@ footer {
     .about-content li {
         font-size: 20px;
     }
+
 }
