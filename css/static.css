@@ -538,6 +538,20 @@ footer {
         flex-shrink: 0;
     }
 
+    /* 修复移动端下拉列表太窄的问题 */
+    .language-selector .language-selector-options {
+        width: 120px;
+        /* 增加宽度以适应所有语言选项 */
+        left: auto;
+        /* 确保下拉列表从右侧对齐 */
+        right: 0;
+    }
+
+    .language-selector .language-text {
+        font-size: 14px;
+        /* 稍微增大文本大小以提高可读性 */
+    }
+
     /* 关于我们部分调整 */
     .about-container {
         height: auto;
@@ -656,5 +670,4 @@ footer {
     .about-content li {
         font-size: 20px;
     }
-
 }
