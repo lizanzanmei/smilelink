@@ -521,9 +521,14 @@ footer {
 
     /* Logo居中 */
     .logo-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         width: auto;
-        flex: 1;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .logo-container img {
