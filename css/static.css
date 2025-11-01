@@ -204,7 +204,22 @@ nav ul li a:hover {
     width: 100px;
 }
 
+.lists {
+    background-color: #f9f0c7;
+}
 
+.lists ul {
+    width: 87.64%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.lists ul li {
+    font-size: 24px;
+    line-height: 40px;
+    padding-bottom: 20px;
+}
 
 
 .passage {
@@ -395,4 +410,187 @@ footer {
 .language-option:hover .language-text {
     color: #445d4a;
     font-weight: 600;
+}
+
+
+/* 响应式设计 - 移动端优化 */
+@media (max-width: 768px) {
+
+    /* 基础样式调整 */
+    body {
+        font-size: 14px;
+    }
+
+    .goldenratio {
+        width: calc(100% - 2 * 4%);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 头部导航调整 */
+    header {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    header .goldenratio {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    .logo-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-container img {
+        max-height: 60px;
+    }
+
+    /* 关于我们部分调整 */
+    .about-container {
+        height: auto;
+        min-height: 600px;
+        padding: 40px 0;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+        padding-bottom: 20px;
+    }
+
+    .about-content li {
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 15px;
+    }
+
+    /* 服务部分调整 */
+    .service {
+        padding: 40px 4% 0 4%;
+    }
+
+    .service section {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 40px;
+    }
+
+    .image-card {
+        height: 200px;
+    }
+
+    .details-container h2 {
+        font-size: 20px;
+        line-height: 40px;
+        margin-bottom: 0;
+    }
+
+    /* 列表部分调整 */
+    .lists ul {
+        width: 92%;
+    }
+
+    .lists ul li {
+        font-size: 16px;
+        line-height: 30px;
+        padding-bottom: 15px;
+    }
+
+    /* 底部调整 */
+    footer {
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .footer-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-social {
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+
+    .footer-social a {
+        margin: 10px 20px 10px 0;
+    }
+
+    .footer-social img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .footer-copyright {
+        text-align: center;
+        position: relative;
+        bottom: auto;
+        margin-top: 20px;
+    }
+
+    /* 语言选择器调整 */
+    .language-selector {
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+/* 平板端优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    .service section {
+        width: 48%;
+        height: 350px;
+    }
+
+    .image-card {
+        height: 225px;
+    }
+
+    nav {
+        width: 60%;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+    .about-content li {
+        font-size: 20px;
+    }
 }
