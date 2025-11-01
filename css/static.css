@@ -428,7 +428,7 @@ footer {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: #333;
+    background-color: #f9f0c7;
     margin: 6px auto;
     transition: all 0.3s ease;
 }
@@ -613,7 +613,8 @@ footer {
     }
 
     .footer-social a {
-        margin: 10px 20px 10px 0;
+        display: block;
+        margin: 10px 40px 10px 0;
     }
 
     .footer-social img {
