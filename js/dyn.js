@@ -570,3 +570,117 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCurrentLanguageDisplay('zh');
     }
 });
+
+
+
+
+// 当前支持的语言列表
+const supportedLanguages = ['zh', 'en', 'ja', 'ko', 'es', 'pt'];
+
+// 根据用户所在地自动检测并设置语言
+function detectUserLanguage() {
+    // 首先检查本地存储中是否有用户之前选择的语言偏好
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
+        return savedLanguage;
+    }
+
+    // 方法1: 使用浏览器语言设置
+    let browserLanguage = navigator.language || navigator.userLanguage;
+    browserLanguage = browserLanguage.split('-')[0]; // 获取主语言代码(如'en-US' -> 'en')
+
+    // 检查浏览器语言是否在我们支持的语言列表中
+    if (supportedLanguages.includes(browserLanguage)) {
+        return browserLanguage;
+    }
+
+    // 方法2: 使用IP地址获取地理位置（需要引入第三方服务）
+    // 这里我们使用ipinfo.io作为示例（每日有免费调用次数限制）
+    // 生产环境建议使用更可靠的付费服务或自建IP地理位置数据库
+    return new Promise((resolve) => {
+        // 默认返回英语作为后备语言
+        let defaultLanguage = 'en';
+
+        fetch('https://ipinfo.io/json?token=YOUR_API_TOKEN')
+            .then(response => response.json())
+            .then(data => {
+                // 根据国家代码映射到相应语言
+                const countryToLanguage = {
+                    'CN': 'zh', // 中国
+                    'HK': 'zh', // 香港
+                    'TW': 'zh', // 台湾
+                    'SG': 'zh', // 新加坡
+                    'JP': 'ja', // 日本
+                    'KR': 'ko', // 韩国
+                    'ES': 'es', // 西班牙
+                    'PT': 'pt', // 葡萄牙
+                    'BR': 'pt', // 巴西
+                    // 其他英语国家
+                    'US': 'en',
+                    'UK': 'en',
+                    'CA': 'en',
+                    'AU': 'en',
+                    'NZ': 'en'
+                };
+
+                // 如果获取到国家代码并且有对应的语言映射，则使用该语言
+                if (data.country && countryToLanguage[data.country]) {
+                    defaultLanguage = countryToLanguage[data.country];
+                }
+
+                resolve(defaultLanguage);
+            })
+            .catch(() => {
+                // 获取失败时使用默认语言
+                resolve(defaultLanguage);
+            });
+    });
+}
+
+// 应用语言设置到页面
+function applyLanguage(lang) {
+    // 检查指定的语言是否受支持
+    if (!translations[lang]) {
+        lang = 'en'; // 默认为英语
+    }
+
+    // 更新所有带有data-i18n属性的元素
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    // 更新页面标题
+    if (translations[lang]['site.title']) {
+        document.title = translations[lang]['site.title'];
+    }
+
+    // 保存用户语言偏好到本地存储
+    localStorage.setItem('preferredLanguage', lang);
+
+    // 标记当前活动的语言选择器
+    document.querySelectorAll('.language-selector option').forEach(option => {
+        if (option.value === lang) {
+            option.selected = true;
+        }
+    });
+}
+
+// 初始化页面语言
+async function initLanguage() {
+    let detectedLanguage = await detectUserLanguage();
+    applyLanguage(detectedLanguage);
+
+    // 为语言选择器添加事件监听器
+    const languageSelector = document.querySelector('.language-selector');
+    if (languageSelector) {
+        languageSelector.addEventListener('change', function () {
+            applyLanguage(this.value);
+        });
+    }
+}
+
+// 页面加载完成后初始化语言
+document.addEventListener('DOMContentLoaded', initLanguage);
