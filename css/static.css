@@ -531,7 +531,7 @@ footer {
 
     /* 语言选择器放在最右边 */
     .language-selector {
-        min-width: 120px;
+        width: 120px;
         margin-top: 0;
         display: flex;
         justify-content: flex-end;
@@ -672,3 +672,4 @@ footer {
     }
 
 }
+
