@@ -415,7 +415,7 @@ footer {
 /* 在头部样式之后添加汉堡菜单按钮样式 */
 .mobile-menu-btn {
     display: none;
-    width: 120px;
+    width: 40px;
     height: 40px;
     background: none;
     border: none;
@@ -517,6 +517,12 @@ footer {
         line-height: 30px;
         font-size: 18px;
         padding-left: 20px;
+    }
+
+    .gr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     /* Logo居中 */
