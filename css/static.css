@@ -415,13 +415,14 @@ footer {
 /* 在头部样式之后添加汉堡菜单按钮样式 */
 .mobile-menu-btn {
     display: none;
-    width: 40px;
+    width: 120px;
     height: 40px;
     background: none;
     border: none;
     cursor: pointer;
     position: relative;
     z-index: 1001;
+    text-align: left;
 }
 
 .mobile-menu-btn span {
@@ -670,6 +671,4 @@ footer {
     .about-content li {
         font-size: 20px;
     }
-
 }
-
